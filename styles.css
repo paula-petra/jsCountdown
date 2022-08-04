@@ -61,7 +61,7 @@ h2
     text-align: center;    
 }
 
-.bloc-time::last-child {
+.bloc-time:last-child {
     margin-right: 0;
 }
 
@@ -82,11 +82,11 @@ h2
     margin-right: 10px;
     background-color: #fff;
     border-radius: 8px; 
-    @include box-shadow(0 3px 4px 0 rgba(0, 0, 0, .2),inset 2px 4px 0 0 rgba(255, 255, 255, .08));
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .2),inset 2px 4px 0 0 rgba(255, 255, 255, .08);
 }
 
-.figure::last-child {
-margin-right: 0;
+.figure:last-child {
+    margin-right: 0;
 }
   
 span {
@@ -116,8 +116,9 @@ span {
     background-color: #f7f7f7;
     transform-origin: 50% 100%;
     -webkit-transform-origin: 50% 100%; 
-    @include border-top-radius(10px); 
-    @include transform(perspective(200px));
+    border-top-left-radius: 10px; 
+    border-top-right-radius: 10px; 
+    transform: perspective(200px);
 }
 
 .bottom {  
@@ -141,7 +142,8 @@ span {
     height: 50%;
     overflow: hidden;    
     background-color: #f7f7f7;
-    @include border-top-radius(10px);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .bottom-back span {
@@ -155,7 +157,7 @@ span {
 .top, .top-back {
     height: 50%;
     overflow: hidden;
-    @include backface-visibility(hidden);
+    backface-visibility: hidden;
 }
 
 .top-back {
@@ -164,8 +166,9 @@ span {
     background-color: #fff;
     -webkit-transform-origin: 50% 0;
     transform-origin: 50% 0;
-    @include transform(perspective(200px) rotateX(180deg));
-    @include border-bottom-radius(10px); 
+    transform: (perspective(200px) rotateX(180deg));
+    border-bottom-left-radius: 10px; 
+    border-bottom-right-radius: 10px; 
 }
 
 span {
